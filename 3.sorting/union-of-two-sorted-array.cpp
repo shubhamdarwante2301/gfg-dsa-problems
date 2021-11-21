@@ -36,21 +36,29 @@ void unionOf(int a[], int b[], int m, int n)
             j++;
         }
     }
-    while(i<m && a[i] != a[i-1])
+    while(i<m)
     {
-        cout<<a[i]<<" ";
+        if(i == 0 || a[i] != a[i-1])
+        {
+            cout<<a[i]<<" ";
+        }
         i++;
     }
-    while(j<n && b[j] != b[j-1])
+
+    while(j<n)
     {
+        if(j == 0 || b[j] != b[j-1])
+        {
         cout<<b[j]<<" ";
+        }
         j++;
     }
+
 }
 
 int main()
 {
-    int a[] = {2,10,20,20,30,50,50,50};
+    int a[] = {2,10,20,20,30,50,50,50,60};
     int b[] = {3,20,40,40,45};
 
     int m=sizeof(a) / sizeof(a[0]);
