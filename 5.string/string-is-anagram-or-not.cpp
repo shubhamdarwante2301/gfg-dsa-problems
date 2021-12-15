@@ -24,7 +24,7 @@ bool isAnagram(string &str1, string &str2)
     }
     for(int m=0; m<256; m++)
     {
-        if(count[m]>0)
+        if(count[m]!=0)
         {
             return false;
         }
