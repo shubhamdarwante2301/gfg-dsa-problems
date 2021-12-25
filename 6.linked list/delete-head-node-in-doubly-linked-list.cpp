@@ -45,6 +45,7 @@ Node *deleteHead(Node *head)
     
     if(head->next == NULL)
     {
+        delete(head);
         return NULL;
     }
     else
